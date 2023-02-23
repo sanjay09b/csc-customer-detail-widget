@@ -6,7 +6,7 @@ echo '🏗️👷 Styling, testing and building your project before committing'
 # Check ESLint Standards
 npm run test ||
 (
-        echo '😤Test Cases Failed.!!😤 
+        echo '😤Test Cases Failed.!!😤'
         false; 
 )
 
