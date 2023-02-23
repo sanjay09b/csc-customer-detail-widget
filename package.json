@@ -1,14 +1,18 @@
 {
   "name": "widget-name",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Widget Boilerplate",
+  "main": "lib/index.js",
+  "module": "lib/index.esm.js",
+  "types": "lib/index.d.ts",
   "scripts": {
+    "build": "rollup -c",
+    "postbuild": "cp package.json lib",
+    "start": "react-scripts start",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "clean": "rm -rf dist",
-    "build": "npm run clean && tsc && cp package.json README.md ./dist",
-    "lint": "eslint . ",
+    "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prepare": "husky install"
   },
@@ -24,6 +28,8 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^12.1.2",
     "@types/jest": "^29.4.0",
@@ -43,8 +49,27 @@
     "husky": "^8.0.3",
     "jest": "^29.4.3",
     "jest-environment-jsdom": "^29.4.3",
+    "postcss": "^8.4.21",
     "prettier": "^2.8.4",
+    "react-scripts": "^5.0.1",
+    "rollup": "~2.78.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "tailwindcss": "^3.2.7",
     "ts-jest": "^29.0.5",
     "typescript": "^4.9.5"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
