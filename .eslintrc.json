@@ -5,10 +5,11 @@
         "jest": true
     },
     "extends": [
-        "airbnb",
+        "airbnb-base",
         "airbnb-typescript",
         "plugin:import/typescript",
-        "plugin:prettier/recommended"
+        "plugin:prettier/recommended",
+        "plugin:react/recommended"
     ],
     "overrides": [
         {
