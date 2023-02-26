@@ -1,6 +1,6 @@
-import React from 'react';
-import './tailwind.css';
-import './custom.css';
+import React from "react";
+import "./tailwind.css";
+import "./custom.css";
 
 const Widget = () => {
   const [count] = React.useState(0);
@@ -11,7 +11,9 @@ const Widget = () => {
         You clicked a button!!!!!
         {count}
       </p>
-      <button type="button">Click me</button>
+      <button type="button" onClick={() => {}}>
+        Click me
+      </button>
     </>
   );
 };
