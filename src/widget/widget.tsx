@@ -6,9 +6,9 @@ const Widget = () => {
   const [count] = React.useState(0);
   return (
     <>
-      <p className="app">
+        <p className="app">
         <h1 className="text-3xl font-bold underline">Hello world!</h1>
-        You clicked a button!!!!!
+          You clicked a button!!!!!
         {count}
       </p>
       <button type="button" onClick={() => {}}>
