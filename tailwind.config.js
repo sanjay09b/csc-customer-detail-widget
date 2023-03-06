@@ -1,8 +1,5 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./src/widget/**/*.{html,js,tsx,ts}"],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
+const tailwindConfig = require('csc-config-widget/tailwind.config')
+
+module.exports={
+    ...tailwindConfig
+};

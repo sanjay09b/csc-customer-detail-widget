@@ -1,6 +1,5 @@
-module.exports = {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
-  }
+const postCssConfig = require('csc-config-widget/postcss.config')
+
+module.exports={
+    ...postCssConfig
+};

@@ -1,21 +1,17 @@
-import React from "react";
-import "./tailwind.css";
-import "./custom.css";
+import React from "react"; // we need this to make JSX compile
+import { WidgetProps } from "./Interface";
+import "./style.css";
 
-const Widget = () => {
-  const [count] = React.useState(0);
-  return (
-    <>
-        <p className="app">
-        <h1 className="text-3xl font-bold underline">Hello world!</h1>
-          You clicked a button!!!!!
-        {count}
-      </p>
-      <button type="button" onClick={() => {}}>
-        Click me
-      </button>
-    </>
-  );
-};
+const Widget = ({
+  title = "Widget Boilterplate",
+  paragraph = "This is a Sample Widget",
+}: WidgetProps): JSX.Element | null => (
+  <div className="widget-name-wrapper">
+    <div className="text-orange-600">
+      <h2>{title}</h2>
+    </div>
+    <p className="my-custom-style">{paragraph}</p>
+  </div>
+);
 
 export default Widget;
