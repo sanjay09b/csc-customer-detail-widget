@@ -9,6 +9,6 @@
       // "module": "es6",
       // "moduleResolution": "node",
     },
-    "include": ["src/widget/**/*"],
+    "include": ["src/widget/**/*", "src/index.d.ts"],
     "exclude": ["src/widget/**/*.test*"]
   }
