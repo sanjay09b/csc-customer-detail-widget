@@ -1,77 +1,68 @@
 import React from "react";
+import { getDateBeginWithMonth } from "../../DateFormater";
+import formatAmount from "../../AmountFormatter";
 
 const RoughRewardsTable = () => {
-  const rougeRewardsDetails: {
-    code: string;
-    amt: string;
-    issueDate: string;
-    expDate: string;
-    order: string;
-    status: string;
-    redemption: string;
-    location: string;
-    cancelledBy: string;
-    cancelledDate: string;
-  }[] = [
+  const rougeRewardsDetails = [
     {
       code: "a-sdnfjsdaasd",
-      amt: "$100.00",
-      issueDate: "3/14/22",
-      expDate: "5/4/23",
+      amt: 100,
+      issueDate: 1647251543000,
+      expDate: 1683211471000,
       order: "###########",
       status: "Redeemed",
-      redemption: "3/2/23",
+      redemption: 1677750743000,
       location: "###########",
       cancelledBy: "",
-      cancelledDate: "",
+      cancelledDate: null,
     },
     {
       code: "a-sdnfjsdaasd",
-      amt: "$100.00",
-      issueDate: "7/14/23",
-      expDate: "10/1/23",
+      amt: 100,
+      issueDate: 1689328343000,
+      expDate: 1696171471000,
       order: "###########",
       status: "Redeemed",
-      redemption: "7/12/22",
+      redemption: 1657637071000,
       location: "store 760",
       cancelledBy: "",
-      cancelledDate: "",
+      cancelledDate: null,
     },
     {
       code: "a-sdnfjsdaasd",
-      amt: "$100.00",
-      issueDate: "3/2/23",
-      expDate: "5/23/23",
+      amt: 100,
+      issueDate: 1677750743000,
+      expDate: 1684853071000,
       order: "###########",
       status: "Expired",
-      redemption: "",
+      redemption: null,
       location: "",
       cancelledBy: "",
-      cancelledDate: "",
+      cancelledDate: null,
     },
     {
       code: "a-sdnfjsdaasd",
-      amt: "$100.00",
-      issueDate: "2/1/23",
-      expDate: "4/21/23",
+      amt: 100,
+      issueDate: 1675263501000,
+      expDate: 1682088271000,
       order: "###########",
       status: "Expired",
-      redemption: "",
+      redemption: null,
       location: "",
       cancelledBy: "Name",
-      cancelledDate: "7/12/22",
+      cancelledDate: 1657637071000,
     },
     {
       code: "a-sdnfjsdaasd",
-      amt: "$100.00",
-      issueDate: "7/7/23",
-      expDate: "10/2/23",
+      amt: 100,
+      issueDate: 1688741901000,
+      expDate: 1696257871000,
       order: "###########",
       status: "Cancelled",
-      redemption: "",
+      redemption: null,
       location: "",
       cancelledBy: "Name",
-      cancelledDate: "7/12/22",
+      cancelledDate: 1657637071000,
     },
   ];
 
@@ -104,7 +95,7 @@ const RoughRewardsTable = () => {
               Status
             </td>
 
-            <td className="px-4 py-4 text-sm  text-left leading-4 overflow-hidden font-normal">
+            <td className="px-4 py-4 text-sm text-left leading-4 font-normal">
               Redemption
             </td>
 
@@ -116,13 +107,13 @@ const RoughRewardsTable = () => {
               Cancelled By
             </td>
 
-            <div className="px-4 py-4 text-sm text-left bg-lightGray leading-4 font-normal">
+            <td className="px-4 py-4 text-sm text-left bg-lightGray leading-4 font-normal">
               Cancelled Date
-            </div>
+            </td>
           </tr>
         </thead>
         <tbody>
-          {rougeRewardsDetails.map((detail: any, index: any): any => {
+          {rougeRewardsDetails.map((detail, index) => {
             return (
               <tr key={index}>
                 <td
@@ -148,7 +139,7 @@ const RoughRewardsTable = () => {
                     }`
                   }
                 >
-                  {detail.amt}
+                  {formatAmount(detail.amt)}
                 </td>
 
                 <td
@@ -161,7 +152,7 @@ const RoughRewardsTable = () => {
                     }`
                   }
                 >
-                  {detail.issueDate}
+                  {getDateBeginWithMonth(detail.issueDate)}
                 </td>
 
                 <td
@@ -174,7 +165,7 @@ const RoughRewardsTable = () => {
                     }`
                   }
                 >
-                  {detail.expDate}
+                  {getDateBeginWithMonth(detail.expDate)}
                 </td>
 
                 <td
@@ -213,7 +204,7 @@ const RoughRewardsTable = () => {
                     }`
                   }
                 >
-                  {detail.redemption}
+                  {getDateBeginWithMonth(detail.redemption)}
                 </td>
 
                 <td
@@ -252,7 +243,7 @@ const RoughRewardsTable = () => {
                     }`
                   }
                 >
-                  {detail.cancelledDate}
+                  {getDateBeginWithMonth(detail.cancelledDate)}
                 </td>
               </tr>
             );

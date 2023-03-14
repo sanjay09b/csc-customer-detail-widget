@@ -1,7 +1,7 @@
 import React from "react"; // we need this to make JSX compile
 
 const PointHistoryTable = () => {
-  const months: string[] = [
+  const months = [
     "Jan",
     "Feb",
     "Mar",
@@ -16,7 +16,7 @@ const PointHistoryTable = () => {
     "Dec",
   ];
 
-  const pointUpdateDetails: { month: string; pointUpdate: string }[] = [
+  const pointUpdateDetails = [
     { month: "Jan", pointUpdate: "##" },
     { month: "Feb", pointUpdate: "-###" },
     { month: "Mar", pointUpdate: "###" },
@@ -31,7 +31,7 @@ const PointHistoryTable = () => {
     { month: "Dec", pointUpdate: "-###" },
   ];
 
-  const pointBalanceDetails: { month: string; pointBalance: string }[] = [
+  const pointBalanceDetails = [
     { month: "Jan", pointBalance: "####" },
     { month: "Feb", pointBalance: "0" },
     { month: "Mar", pointBalance: "####" },
@@ -51,29 +51,27 @@ const PointHistoryTable = () => {
       <table className="table-auto  w-full">
         <thead>
           <tr className="border-b-2 border-b-gray-100">
-            <td className="pl-0 pr-2 py-4 font-normal text-left leading-4">
+            <td className="pl-0 pr-2 py-4 font-normal text-left leading-4 text-sm">
               Months
             </td>
-            {months.map(function (month: string, index: number): any {
+            {months.map(function (month, index) {
               return (
-                <>
-                  <td
-                    key={index}
-                    className={
-                      "px-4 py-4 text-left  leading-4 text-sm font-normal " +
-                      `${index % 2 === 0 ? "bg-lightGray" : ""}`
-                    }
-                  >
-                    {month}
-                  </td>
-                </>
+                <td
+                  key={index}
+                  className={
+                    "px-4 py-4 text-left  leading-4 text-sm font-normal " +
+                    `${index % 2 === 0 ? "bg-lightGray" : ""}`
+                  }
+                >
+                  {month}
+                </td>
               );
             })}
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td className=" pl-0 pr-2 py-4 font-normal text-left leading-4 border-b-2 border-b-gray-100">
+            <td className=" pl-0 pr-2 py-4 font-normal text-left leading-4 border-b-2 border-b-gray-100 text-sm">
               Point Update
             </td>
             {pointUpdateDetails.map((detail: any, index: any): any => {
@@ -91,7 +89,7 @@ const PointHistoryTable = () => {
             })}
           </tr>
           <tr>
-            <td className=" pl-0 pr-2 py-4 font-normal text-left leading-4 border-b-2 border-b-gray-100">
+            <td className=" pl-0 pr-2 py-4 font-normal text-left leading-4 border-b-2 border-b-gray-100 text-sm">
               Point Balance
             </td>
             {pointBalanceDetails.map((detail: any, index: any): any => {
