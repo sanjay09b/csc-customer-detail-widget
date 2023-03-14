@@ -1,5 +1,6 @@
 import React from "react";
 import "./CustomerInformation.css";
+import { getDate } from "../../DateFormater";
 
 const CustomerInformation = (props: any) => {
   return (
@@ -38,6 +39,7 @@ const CustomerInformation = (props: any) => {
           <input
             className="rounded p-2 border-slate-200 border-2"
             type="date"
+            value={getDate(props.information.birthday)}
           />
           <div className="justify-end flex basis-1/2 font-normal text-sm"></div>
         </div>
