@@ -11,4 +11,4 @@
     },
     "include": ["src/widget/**/*", "src/index.d.ts"],
     "exclude": ["src/widget/**/*.test*"]
-  }
+ }
