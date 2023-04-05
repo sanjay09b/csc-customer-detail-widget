@@ -1,4 +1,3 @@
-import React from "react";
 import CustomStyles from "../CustomStyles";
 
 const SystemButton = (): JSX.Element => {

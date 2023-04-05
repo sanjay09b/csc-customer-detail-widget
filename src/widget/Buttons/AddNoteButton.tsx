@@ -1,4 +1,3 @@
-import React from "react";
 import CustomStyle from "../CustomStyles";
 
 const AddNoteButton = (): JSX.Element => {

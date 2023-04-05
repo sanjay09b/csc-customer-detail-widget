@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import VerticalLine from "../SeparationLine/VerticalLine";
 import RedirectButton from "../RedirectButton/RedirectButton";
 import { CustomerHeader } from "../Interface";
-// import StatusButton from "../Utility/StatusButton";
 import ActiveStatusButton from "../StatusButtons/ActiveStatusButton";
 import DeactivatedStatusButton from "../StatusButtons/DeactivatedStatusButton";
 import FraudStatusButton from "../StatusButtons/FraudStatusButton";
@@ -32,17 +31,15 @@ const Header = (): JSX.Element => {
   const [userData, setUserData] = useState<CustomerHeader>();
   const [loading, setLoading] = useState(true);
 
-  useEffect((): void => {
+  useEffect(() => {
     const url: string =
       "https://6409df426ecd4f9e18bdd647.mockapi.io/api/v1/customers/641016776/customer";
-    async function getUserData() {
+    async function getUserData(): Promise<void> {
       try {
-        if (loading) {
-          const response = await axios.get(url);
-          setUserData(response.data.customerDetails[0]);
-        }
+        const response = await axios.get(url);
+        setUserData(response.data.customerDetails[0]);
       } catch (error) {
-        console.log(error);
+        //  console.log(error);
       } finally {
         setLoading(false);
       }

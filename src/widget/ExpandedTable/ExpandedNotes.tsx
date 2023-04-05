@@ -1,9 +1,8 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import AddNoteButton from "../Buttons/AddNoteButton";
 import SearchBar from "../SearchBar/SearchBar";
 import SearchLens from "../images/search_lens.svg";
-// import NoteType from "../Utility/Notetype";
 import info from "../images/Info.svg";
 import dropDown from "../images/dropdown.svg";
 import { NotesTable } from "../Interface";
@@ -30,23 +29,20 @@ const ExpandedNotes = (): JSX.Element => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    async function getNotesData() {
-      const url =
-        "https://6409df426ecd4f9e18bdd647.mockapi.io/api/v1/notesData";
+    const url: string =
+      "https://6409df426ecd4f9e18bdd647.mockapi.io/api/v1/notesData";
+    async function getNotesData(): Promise<void> {
       try {
-        if (loading) {
-          const response = await axios.get(url);
-          setNotesData([...response.data]);
-        }
+        const response = await axios.get(url);
+        setNotesData([...response.data]);
       } catch (error) {
-        console.log(error);
+        //  console.log(error);
       } finally {
         setLoading(false);
       }
     }
     getNotesData();
   }, []);
-  console.log(CustomStyles.notesTable.tableHeader.csridCellWrapper);
   return (
     <>
       {loading ? (
