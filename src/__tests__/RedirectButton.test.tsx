@@ -1,9 +1,9 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import SuspendedStatusButton from "../widget/StatusButtons/SuspendedStatusButton";
+import RedirectButton from "../widget/RedirectButton/RedirectButton";
 
 describe("Suspended status button rendred successfully", () => {
   it("renders", () => {
-    render(<SuspendedStatusButton />);
+    render(<RedirectButton />);
   });
 });

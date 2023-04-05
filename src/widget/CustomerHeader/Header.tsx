@@ -3,34 +3,29 @@ import axios from "axios";
 import VerticalLine from "../SeparationLine/VerticalLine";
 import RedirectButton from "../RedirectButton/RedirectButton";
 import { CustomerHeader } from "../Interface";
-import ActiveStatusButton from "../StatusButtons/ActiveStatusButton";
-import DeactivatedStatusButton from "../StatusButtons/DeactivatedStatusButton";
-import FraudStatusButton from "../StatusButtons/FraudStatusButton";
-import BannedStatusButton from "../StatusButtons/BannedStatusButton";
-import SuspendedStatusButton from "../StatusButtons/SuspendedStatusButton";
+import StatusButtons from "../StatusButtons/StatusButtons";
 import CustomStyle from "../CustomStyles";
 
-const statusButton = (status): JSX.Element | null => {
-  switch (status) {
-    case "Active":
-      return <ActiveStatusButton />;
-    case "Deactivated":
-      return <DeactivatedStatusButton />;
-    case "Fraud":
-      return <FraudStatusButton />;
-    case "Banned":
-      return <BannedStatusButton />;
-    case "Suspended":
-      return <SuspendedStatusButton />;
-    default:
-      return <div>Unknown Error</div>;
-  }
-};
+// const statusButton = (status): JSX.Element | null => {
+//   switch (status) {
+//     case "Active":
+//       return <ActiveStatusButton />;
+//     case "Deactivated":
+//       return <DeactivatedStatusButton />;
+//     case "Fraud":
+//       return <FraudStatusButton />;
+//     case "Banned":
+//       return <BannedStatusButton />;
+//     case "Suspended":
+//       return <SuspendedStatusButton />;
+//     default:
+//       return <div>Unknown Error</div>;
+//   }
+// };
 
 const Header = (): JSX.Element => {
   const [userData, setUserData] = useState<CustomerHeader>();
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     const url: string =
       "https://6409df426ecd4f9e18bdd647.mockapi.io/api/v1/customers/641016776/customer";
@@ -58,7 +53,7 @@ const Header = (): JSX.Element => {
               <div className={CustomStyle.customerHeader.name}>
                 {userData.firstName} {userData.lastName}
               </div>
-              {statusButton(userData.activeStatus)}
+              <StatusButtons status={userData.activeStatus} />
             </div>
             <div className={CustomStyle.customerHeader.redirectPositionWrapper}>
               <div
@@ -90,4 +85,4 @@ const Header = (): JSX.Element => {
   );
 };
 
-export { Header, statusButton };
+export default Header;
