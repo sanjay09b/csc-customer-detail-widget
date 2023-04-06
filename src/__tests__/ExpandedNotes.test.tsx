@@ -3,7 +3,7 @@ import { render, screen, waitFor } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import axios from "axios";
 import MockAdapter from "axios-mock-adapter";
-import { ExpandedNotes, noteType } from "../widget/ExpandedTable/ExpandedNotes";
+import ExpandedNotes from "../widget/ExpandedTable/ExpandedNotes";
 
 const mock = new MockAdapter(axios);
 
@@ -89,6 +89,5 @@ describe("ExpandedNotes", () => {
     await waitFor(() =>
       expect(screen.queryByText("Loading...")).not.toBeInTheDocument(),
     );
-    //  expect(screen.getByText("Error fetching notes data")).toBeInTheDocument();
   });
 });

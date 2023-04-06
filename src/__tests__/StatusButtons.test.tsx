@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import StatusButtons from "../widget/StatusButtons/StatusButtons";
+import StatusButtons from "../widget/Buttons/StatusButtons";
 
 describe("StatusButtons", () => {
   it("renders Active button when status prop is Active", () => {

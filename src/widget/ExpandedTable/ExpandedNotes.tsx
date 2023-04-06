@@ -6,23 +6,8 @@ import SearchLens from "../images/search_lens.svg";
 import info from "../images/Info.svg";
 import dropDown from "../images/dropdown.svg";
 import { NotesTable } from "../Interface";
-import OrderButton from "../NotesTypeButtons/OrderButton";
-import SystemButton from "../NotesTypeButtons/SystemButton";
-import ProfileButton from "../NotesTypeButtons/ProfileButton";
+import NoteTypeButton from "../Buttons/NoteTypeButtons";
 import CustomStyles from "../CustomStyles";
-
-const noteType = (type): JSX.Element | null => {
-  switch (type) {
-    case "Order":
-      return <OrderButton data-testid="order" />;
-    case "System":
-      return <SystemButton data-testid="system" />;
-    case "Profile":
-      return <ProfileButton data-testid="profile" />;
-    default:
-      return <div>Unknown Error</div>;
-  }
-};
 
 const ExpandedNotes = (): JSX.Element => {
   const [notesData, setNotesData] = useState<NotesTable[]>([]);
@@ -34,7 +19,7 @@ const ExpandedNotes = (): JSX.Element => {
     async function getNotesData(): Promise<void> {
       try {
         const response = await axios.get(url);
-        setNotesData([...response.data]);
+        setNotesData(response.data);
       } catch (error) {
         //  console.log(error);
       } finally {
@@ -203,7 +188,7 @@ const ExpandedNotes = (): JSX.Element => {
                           CustomStyles.notesTable.bodyStyle.generalCellWrap
                         }
                       >
-                        {noteType(data.type)}
+                        <NoteTypeButton noteType={data.type} />
                       </td>
                       <td
                         className={
@@ -238,4 +223,4 @@ const ExpandedNotes = (): JSX.Element => {
   );
 };
 
-export { ExpandedNotes, noteType };
+export default ExpandedNotes;

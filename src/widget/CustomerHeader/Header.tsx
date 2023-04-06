@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import VerticalLine from "../SeparationLine/VerticalLine";
-import RedirectButton from "../RedirectButton/RedirectButton";
+import RedirectButton from "../Buttons/RedirectButton";
 import { CustomerHeader } from "../Interface";
-import StatusButtons from "../StatusButtons/StatusButtons";
+import StatusButtons from "../Buttons/StatusButtons";
 import CustomStyle from "../CustomStyles";
 
 // const statusButton = (status): JSX.Element | null => {

@@ -43,13 +43,4 @@ describe("Header component", () => {
     expect(screen.getByText(`${mockUserData.phoneNumber}`)).toBeInTheDocument();
     expect(screen.getByText(`${mockUserData.risk}`)).toBeInTheDocument();
   });
-
-  // it("renders the correct status button based on the user's active status", () => {
-  //   expect(statusButton("Active")).toMatchSnapshot();
-  //   expect(statusButton("Deactivated")).toMatchSnapshot();
-  //   expect(statusButton("Fraud")).toMatchSnapshot();
-  //   expect(statusButton("Banned")).toMatchSnapshot();
-  //   expect(statusButton("Suspended")).toMatchSnapshot();
-  //   expect(statusButton("Unknown")).toMatchSnapshot();
-  // });
 });

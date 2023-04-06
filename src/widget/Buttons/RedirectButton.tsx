@@ -1,4 +1,3 @@
-import React from "react";
 import rectangle from "../images/Rectangle.svg";
 import arrow from "../images/Vector.svg";
 import CustomStyles from "../CustomStyles";
