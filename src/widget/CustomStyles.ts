@@ -1,74 +1,81 @@
 const CustomStyles = {
   notesTable: {
-    wrapper: "overflow-auto",
+    wrapper: "tw-overflow-auto",
     tableHeader: {
       headerStyle:
-        "text-left text-base align-text-top border-b-2 border-customGrey whitespace-nowrap",
-      generalCellWrapper: "pr-6 pb-4",
-      generalWrapper: "flex",
-      imgDropdown: "w-3 h-3 self-center ml-3",
-      csridCellWrapper: "w-32 pr-6 pb-4",
-      imgSearchLens: "w-4 h-4 self-center mr-2",
-      typeWrapper: "w-20 pr-6 pb-4 text-center",
-      contactCellWrapper: "pr-9 pb-4 flex",
-      imgInfo: "pl-2 self-center",
+        "tw-text-left tw-text-base tw-align-text-top tw-border-b-2 tw-border-customGrey tw-whitespace-nowrap",
+      generalCellWrapper: "tw-pr-6 tw-pb-4",
+      generalWrapper: "tw-flex",
+      imgDropdown: "tw-w-3 tw-h-3 tw-self-center tw-ml-3",
+      csridCellWrapper: "tw-w-32 tw-pr-6 tw-pb-4",
+      imgSearchLens: "tw-w-4 tw-h-4 tw-self-center tw-mr-2",
+      typeWrapper: "tw-w-20 tw-pr-6 tw-pb-4 tw-text-center",
+      contactCellWrapper: "tw-pr-9 tw-pb-4 tw-flex",
+      imgInfo: "tw-pl-2 tw-self-center",
       description: {
-        cellWrapper: "pb-4",
-        descriptionWrap: "self-center basis-1/2 pr-3",
-        searchNoteWrap: "flex basis-1/2 justify-end ml-5",
-        generalWrap: "self-center",
+        cellWrapper: "tw-pb-4",
+        descriptionWrap: "tw-self-center tw-basis-1/2 tw-pr-3",
+        searchNoteWrap: "tw-flex tw-basis-1/2 tw-justify-end tw-ml-5",
+        generalWrap: "tw-self-center",
       },
     },
     bodyStyle: {
-      rowStyle: "text-left align-text-top text-sm font-normal border-b-2",
-      generalCellWrap: "pr-6 py-4",
-      orderidWrap: "underline pr-6 py-4 text-customBlue",
+      rowStyle:
+        "tw-text-left tw-align-text-top tw-text-sm tw-font-normal tw-border-b-2",
+      generalCellWrap: "tw-pr-6 tw-py-4",
+      orderidWrap: "tw-underline tw-pr-6 tw-py-4 tw-text-customBlue",
     },
   },
   customerHeader: {
-    name: "font-bold text-2xl self-center",
-    nameStatusWrapper: "flex basis-1/2",
-    sephoraRedirect: "text-customBlue font-normal text-sm self-center",
-    sephoraRedirectWrapper: "flex self-center",
-    redirectPositionWrapper: "flex basis-1/2 justify-end",
-    alignRow: "flex",
-    centerAlign: "self-center",
-    alignRowWithSpace: "flex space-x-2 font-normal text-sm items-stretch",
+    name: "tw-font-bold tw-text-2xl tw-self-center",
+    nameStatusWrapper: "tw-flex tw-basis-1/2",
+    sephoraRedirect:
+      "tw-text-customBlue tw-font-normal tw-text-sm tw-self-center",
+    sephoraRedirectWrapper: "tw-flex tw-self-center",
+    redirectPositionWrapper: "tw-flex tw-basis-1/2 tw-justify-end",
+    alignRow: "tw-flex",
+    centerAlign: "tw-self-center",
+    alignRowWithSpace:
+      "tw-flex tw-space-x-2 tw-font-normal tw-text-sm tw-items-stretch",
   },
-  exportWrapper: "mx-6 mt-6",
+  exportWrapper: "tw-mx-6 tw-mt-6",
   statusButtons: {
     active:
-      "bg-success rounded text-white font-bold text-xs ml-2 px-2 py-px self-center",
+      "tw-bg-success tw-rounded tw-text-white tw-font-bold tw-text-xs tw-ml-2 tw-px-2 tw-py-px tw-self-center",
     banned:
-      "bg-banned rounded text-white font-bold text-xs ml-2 px-2 py-px self-center",
+      "tw-bg-banned tw-rounded tw-text-white tw-font-bold tw-text-xs tw-ml-2 tw-px-2 tw-py-px tw-self-center",
     deactivated:
-      "bg-inactive rounded text-inactiveTextColor font-bold text-xs ml-2 px-2 py-px self-center",
+      "tw-bg-inactive tw-rounded tw-text-inactiveTextColor tw-font-bold tw-text-xs tw-ml-2 tw-px-2 tw-py-px tw-self-center",
     fraud:
-      "bg-fraud rounded text-white font-bold text-xs ml-2 px-2 py-px self-center",
+      "tw-bg-fraud tw-rounded tw-text-white tw-font-bold tw-text-xs tw-ml-2 tw-px-2 tw-py-px tw-self-center",
     suspended:
-      "bg-suspended rounded text-white font-bold text-xs ml-2 px-2 py-px self-center",
+      "tw-bg-suspended tw-rounded tw-text-white tw-font-bold tw-text-xs tw-ml-2 tw-px-2 tw-py-px tw-self-center",
   },
   notesTypeButtons: {
-    profile: "bg-profileBg rounded font-bold text-xs px-2 py-px self-center",
-    system: "bg-systemBg rounded font-bold text-xs px-2 py-px self-center",
-    order: "bg-orderBg rounded font-bold text-xs px-2 py-px self-center",
+    profile:
+      "tw-bg-profileBg tw-rounded tw-font-bold tw-text-xs tw-px-2 tw-py-px tw-self-center",
+    system:
+      "tw-bg-systemBg tw-rounded tw-font-bold tw-text-xs tw-px-2 tw-py-px tw-self-center",
+    order:
+      "tw-bg-orderBg tw-rounded tw-font-bold tw-text-xs tw-px-2 tw-py-px tw-self-center",
   },
   separationLine: {
-    horizontalLite: "h my-3 bg-customGrey",
-    horizontalBold: "my-4 h-1 bg-black",
-    vertical: "h-4 w-0.5 bg-gray-400 self-center",
+    horizontalLite: "tw-h tw-my-3 tw-bg-customGrey",
+    horizontalBold: "tw-my-4 tw-h-1 tw-bg-black",
+    vertical: "tw-h-4 tw-w-0.5 tw-bg-gray-400 tw-self-center",
   },
   addNoteButton:
-    "rounded-full text-sm text-white bg-black py-2 font-bold px-6 py-3",
+    "tw-rounded-full tw-text-sm tw-text-white tw-bg-black tw-py-2 tw-font-bold tw-px-6 tw-py-3",
   redirectButton: {
-    buttonWrapper: "flex pl-3 m-0",
-    imgOne: "relative",
-    imgTwo: "relative right-3",
+    buttonWrapper: "tw-flex tw-pl-3 tw-m-0",
+    imgOne: "tw-relative",
+    imgTwo: "tw-relative tw-right-3",
   },
   searchBar: {
-    wrapper: "flex self-center mr-5 bg-inactive rounded-full",
-    image: "w-4 h-4 self-center ml-3",
-    input: "focus:outline-0 bg-transparent text-sm font-normal p-2",
+    wrapper: "tw-flex tw-self-center tw-mr-5 tw-bg-inactive tw-rounded-full",
+    image: "tw-w-4 tw-h-4 tw-self-center tw-ml-3",
+    input:
+      "tw-focus:outline-0 tw-bg-transparent tw-text-sm tw-font-normal tw-p-2",
   },
 };
 

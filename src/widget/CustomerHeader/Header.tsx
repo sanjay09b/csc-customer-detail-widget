@@ -6,23 +6,6 @@ import { CustomerHeader } from "../Interface";
 import StatusButtons from "../Buttons/StatusButtons";
 import CustomStyle from "../CustomStyles";
 
-// const statusButton = (status): JSX.Element | null => {
-//   switch (status) {
-//     case "Active":
-//       return <ActiveStatusButton />;
-//     case "Deactivated":
-//       return <DeactivatedStatusButton />;
-//     case "Fraud":
-//       return <FraudStatusButton />;
-//     case "Banned":
-//       return <BannedStatusButton />;
-//     case "Suspended":
-//       return <SuspendedStatusButton />;
-//     default:
-//       return <div>Unknown Error</div>;
-//   }
-// };
-
 const Header = (): JSX.Element => {
   const [userData, setUserData] = useState<CustomerHeader>();
   const [loading, setLoading] = useState(true);

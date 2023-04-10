@@ -10,7 +10,7 @@ import NoteTypeButton from "../Buttons/NoteTypeButtons";
 import CustomStyles from "../CustomStyles";
 
 const ExpandedNotes = (): JSX.Element => {
-  const [notesData, setNotesData] = useState<NotesTable[]>([]);
+  const [notesData, setNotesData] = useState<NotesTable[]>();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
