@@ -13,12 +13,12 @@ const AccountInfo = () => {
     dateValue: 1678774018773,
     CRMId: "1234567890",
     BIStatus: "rouge",
-    YTDSpend: "1238.00",
-    VIBStatus2024: "Not eligible until 2024",
+    YTDSpend: "1238",
+    VIBStatus2024: "Not eligible",
     VIBUntill: 1678774018773,
     qualifiedForVIB: 1678774018773,
     VIBRougeUntil: 1678774018773,
-    points: "763pts",
+    points: "763",
   };
   if (userAccountInfo.BIStatus === "rouge") {
     BIStatusImage = rouge;
@@ -91,7 +91,7 @@ const AccountInfo = () => {
           YTD spend ($)
         </div>
         <div className="basis-5/6 text-left leading-4 text-sm">
-          ${userAccountInfo.YTDSpend}
+          ${userAccountInfo.YTDSpend}.00
         </div>
       </div>
       <div className="mt-3 flex space-x-4 mb-3">
@@ -99,7 +99,7 @@ const AccountInfo = () => {
           Spend($)needed for VIB Status through 2024
         </div>
         <div className="basis-5/6 text-left leading-4  text-sm">
-          {userAccountInfo.VIBStatus2024}
+          {userAccountInfo.VIBStatus2024} until 2024
         </div>
       </div>
       <div className="mt-3 flex space-x-4 mb-3">
@@ -127,7 +127,7 @@ const AccountInfo = () => {
       <div className="mt-3 flex">
         <div className="basis-1/6 text-base leading-5 font-bold">Points</div>
         <div className="basis-4/6 text-left leading-4 text-sm ml-5">
-          {userAccountInfo.points}
+          {userAccountInfo.points}pts
         </div>
         <div className="basis-2/12 flex justify-end mr-5">
           <AddButton />
