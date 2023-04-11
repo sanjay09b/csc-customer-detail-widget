@@ -32,6 +32,10 @@
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.0.2",
+    "@babel/core": "^7.21.3",
+    "@testing-library/jest-dom": "^5.16.5",
+    "axios-mock-adapter": "^1.21.4",
+    "babel-loader": "^8.3.0",
     "csc-config-widget": "1.0.5",
     "husky": "^8.0.3"
   },

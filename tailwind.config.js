@@ -19,7 +19,41 @@ module.exports = {
       colors: {
         lightGray: "#EEEEEE",
         customBlue: "#136BEA",
+        current: "currentColor",
+        black: {
+          DEFAULT: "#000000", // primary
+          2: "#000000", // secondary
+          3: "#000000", // secondary
         },
+        white: {
+          DEFAULT: "#FFFFFF", // primary
+          2: "#F6F6F8", // secondary
+        },
+        gray: {
+          DEFAULT: "#CCCCCC",
+          2: "#666666",
+          3: "#F6F6F8",
+          4: "#EEEEEE",
+        },
+        red: {
+          DEFAULT: "#CF112C",
+        },
+        link: {
+          DEFAULT: "#136BEA",
+        },
+        transparent: "transparent",
+        success: "#008048",
+        inactive: "#F6F6F8",
+        inactiveTextColor: "#666666",
+        suspended: "#EB7100",
+        banned: "#CF112C",
+        fraud: "#000000",
+        hoverBlue: "#E5F2FD",
+        customBlue: "#136BEA",
+        orderBg: "#E5F2FD",
+        profileBg: "#E5C2AC",
+        systemBg: "#EEEEEE",
+      },
       fontFamily: {
         sans: ["Helvetica Neue"],
       },
@@ -30,7 +64,14 @@ module.exports = {
         lg: ["20px", "22px"],
         xl: ["24px", "26px"],
       },
+      borderRadius: {
+        none: "0",
+        4: "4px",
+        22: "22px",
+      },
+      spacing: {
+        13: "13px",
+      },
     },
   },
 };
-
