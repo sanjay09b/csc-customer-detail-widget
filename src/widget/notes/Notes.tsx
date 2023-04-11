@@ -22,7 +22,7 @@ const Notes: React.FC = () => {
             // setNotes(null);
             setNotes(response.data);
           } else {
-            setCount(4);
+            setCount(response.data.length);
             setNotes(response.data.slice(0, 4));
           }
           setLoading(false);
