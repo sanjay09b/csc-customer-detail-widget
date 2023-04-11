@@ -57,4 +57,4 @@ type CustomerHeader = {
   customerId?: string;
 };
 
-export { WidgetProps, CustomerProps, CustomerHeader, NotesTable,AccountDatas  };
+export { WidgetProps, CustomerProps, CustomerHeader, NotesTable, AccountDatas };
