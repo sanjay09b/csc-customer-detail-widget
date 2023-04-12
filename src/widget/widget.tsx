@@ -3,7 +3,7 @@ import "./style.css";
 import Transaction from "./TransactionHistory/Transaction";
 
 const Widget = (): JSX.Element | null => (
-  <div>
+  <div className="tw-mx-6">
     <Transaction />
   </div>
 );

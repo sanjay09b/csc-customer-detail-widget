@@ -1,5 +1,5 @@
 const CustomStyles = {
-  transactionHistory: "tw-mx-6",
+  transactionHistory: "tw-flex tw-flex-col",
   header: "tw-flex tw-space-x-2 tw-mt-6 tw-mb-4",
   transaction: "tw-font-bold tw-text-xl tw-pr-2 tw-self-center",
   viewAll: "tw-text-customBlue tw-text-sm tw-self-center",
