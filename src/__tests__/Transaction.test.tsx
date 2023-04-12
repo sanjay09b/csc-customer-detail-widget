@@ -2,7 +2,6 @@ import { render, screen, waitFor } from "@testing-library/react";
 import React from "react";
 import Transaction from "../widget/TransactionHistory/Transaction";
 import axios, { AxiosResponse } from "axios";
-import { act } from "react-dom/test-utils";
 
 describe("transactionTesting", () => {
   afterEach(() => {
