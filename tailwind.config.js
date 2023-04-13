@@ -17,8 +17,6 @@ module.exports = {
     },
     extend: {
       colors: {
-        lightGray: "#EEEEEE",
-        customBlue: "#136BEA",
         current: "currentColor",
         black: {
           DEFAULT: "#000000", // primary
@@ -34,6 +32,7 @@ module.exports = {
           2: "#666666",
           3: "#F6F6F8",
           4: "#EEEEEE",
+          5: "#D9D9D9",
         },
         red: {
           DEFAULT: "#CF112C",
@@ -49,6 +48,7 @@ module.exports = {
         banned: "#CF112C",
         fraud: "#000000",
         hoverBlue: "#E5F2FD",
+        lightGray: "#EEEEEE",
         customBlue: "#136BEA",
         orderBg: "#E5F2FD",
         profileBg: "#E5C2AC",

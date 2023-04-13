@@ -1,4 +1,4 @@
-const customeStyle = {
+const customStyle = {
   header: {
     header: "tw-flex tw-flex-row tw-space-x-2 tw-mt-4 tw-mb-4",
     heading: " tw-font-bold tw-text-xl tw-leading-5",
@@ -34,5 +34,30 @@ const customeStyle = {
   mb_2: "tw-mb-2",
   basis: "tw-basis-1/2 ",
   mr_6: "tw-mr-6",
+  notesHeader: "tw-flex tw-flex-row tw-items-center tw-mt-4 tw-mb-2",
+  notes: "tw-text-xl tw-basis-14 tw-mr-2 tw-font-bold tw-leading-5",
+  viewAll:
+    "tw-text-sm tw-mr-2 tw-grow tw-basis-8/12 tw-font-normal tw-text-link tw-leading-4",
+  addNote: "tw-text-sm tw-mr-2 tw-font-normal tw-text-link tw-leading-4",
+  noteHeader:
+    "tw-flex tw-flex-row tw-items-center tw-mb-2 tw-w-1/2 lg:tw-w-3/5 ",
+  contact:
+    "tw-bg-gray-4 tw-rounded tw-font-bold tw-text-xs tw-px-1.5 tw-self-center tw-mr-2 tw-leading-4 ",
+  viewOrder: "tw-text-link tw-text-sm tw-leading-4 tw-w-2/5 tw-mb-2",
+  by: "tw-mr-2 tw-text-sm tw-leading-4 tw-font-normal",
+  date: "tw-mr-2 tw-text-sm tw-leading-4 tw-font-normal",
+  description: "tw-text-sm tw-leading-4 tw-font-normal",
+  customerId: "tw-text-sm tw-leading-4 tw-font-normal",
+  note: "tw-flex tw-flex-col",
+  notesContainer: "tw-mt-2.5",
+  notesMainHeader: "tw-flex tw-flex-col",
+  composeNotes: "tw-flex tw-justify-end lg:tw-basis-1/5 tw-items-center",
+  editImageContainer: "tw-flex",
+  editImage: "tw-w-5 tw-h-5",
+  seperator: "tw-h-px tw-bg-gray-5 tw-mb-2 tw-mt-2",
+  notesSummary: "lg:tw-basis-1/2 lg:tw-mr-2",
+  loading: "tw-text-sm tw-font-normal tw-leading-4",
 };
-export default customeStyle;
+
+export default customStyle;
+

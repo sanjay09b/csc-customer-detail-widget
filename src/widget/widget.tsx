@@ -2,8 +2,9 @@ import React from "react"; // we need this to make JSX compile
 import { WidgetProps } from "./Interface";
 import HeaderExport from "./CustomerHeader/HeaderExport";
 import ExpandedNotesExport from "./ExpandedTable/ExpandedNotesExport";
-import "./style.css";
 import AccountDetailsExport from "./AccountAndBIDetails/AccountDetailsExport";
+import Notes from "./notes/Notes";
+import "./style.css";
 
 const Widget = ({
   title = "",
@@ -16,6 +17,7 @@ const Widget = ({
     <p className="my-custom-style">{paragraph}</p>
     <HeaderExport />
     <AccountDetailsExport />
+    <Notes />
     <ExpandedNotesExport />
   </div>
 );
