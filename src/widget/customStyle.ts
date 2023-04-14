@@ -1,5 +1,5 @@
 const customStyle = {
-  notesHeader: "tw-flex tw-flex-row tw-items-center tw-mt-2 tw-mb-2",
+  notesHeader: "tw-flex tw-flex-row tw-items-center tw-mb-2",
   notes: "tw-text-xl tw-basis-14 tw-mr-2 tw-font-bold tw-leading-5",
   viewAll:
     "tw-text-sm tw-mr-2 tw-grow tw-basis-8/12 tw-font-normal tw-text-link tw-leading-4",
@@ -11,7 +11,7 @@ const customStyle = {
   viewOrder: "tw-text-link tw-text-sm tw-leading-4 tw-w-2/5 tw-mb-2",
   by: "tw-mr-2 tw-text-sm tw-leading-4 tw-font-normal",
   date: "tw-mr-2 tw-text-sm tw-leading-4 tw-font-normal",
-  description: "tw-text-sm tw-leading-4 tw-font-normal",
+  description: "tw-text-sm tw-leading-4 tw-font-normal ",
   customerId: "tw-text-sm tw-leading-4 tw-font-normal",
   note: "tw-flex tw-flex-col",
   notesContainer: "tw-mt-2.5",
@@ -19,8 +19,8 @@ const customStyle = {
   composeNotes: "tw-flex tw-justify-end tw-items-center",
   editImageContainer: "tw-flex",
   editImage: "tw-w-5 tw-h-5",
-  seperator: "tw-h-px tw-bg-gray-5 tw-mb-2 tw-mt-2",
-  notesSummary: "tw-flex tw-flex-col",
+  seperator: "tw-border-gray-5 tw-border-b-2",
+  notesSummary: "tw-flex tw-flex-col ",
   loading: "tw-text-sm tw-font-normal tw-leading-4",
 };
 
