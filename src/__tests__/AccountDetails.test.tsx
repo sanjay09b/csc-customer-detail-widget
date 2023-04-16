@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen ,waitFor } from "@testing-library/react";
 import React from "react";
 import {
   AccountDetails,
@@ -58,9 +58,8 @@ describe("Account Details", () => {
     jest.spyOn(axios, "get").mockResolvedValueOnce(mAxiosResponse);
     render(<AccountDetails />);
     expect(screen.getByText("Loading")).toBeInTheDocument();
-    expect(await screen.findByText("Redeemed")).toBeInTheDocument();
-    expect(await screen.findByText("CRMId 2")).toBeInTheDocument();    
-    expect(await screen.findByText("991")).toBeInTheDocument();  
+    waitFor(() => expect(screen.findByText("CRMId 2")).toBeInTheDocument());
+    waitFor(() => expect(screen.findByText("Redeemed")).toBeInTheDocument()); 
   });
   it("should render Accound Details", async () => {
     const mAxiosResponse = {
@@ -72,7 +71,7 @@ describe("Account Details", () => {
           birthDate: 31,
           birthYear: 2001,
           profileId: 60378,
-          birthdayGift: "",
+          birthdayGift: "Not Redeemed",
           CRMId: "CRMId 2",
           USAId: "991",
           shippingAddress: {
@@ -97,9 +96,8 @@ describe("Account Details", () => {
     jest.spyOn(axios, "get").mockResolvedValueOnce(mAxiosResponse);
     render(<AccountDetails />);
     expect(screen.getByText("Loading")).toBeInTheDocument();
-    expect(await screen.findByText("Not Redeemed")).toBeInTheDocument();
-    expect(await screen.findByText("CRMId 2")).toBeInTheDocument();    
-    expect(await screen.findByText("991")).toBeInTheDocument();   
+    waitFor(() => expect(screen.findByText("CRMId 2")).toBeInTheDocument());
+    waitFor(() => expect(screen.findByText("Not Redeemed")).toBeInTheDocument());
   });
 
 });

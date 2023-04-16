@@ -15,6 +15,14 @@ module.exports = {
 
       "tw-3xl": "1920px",
     },
+    minHeight: {
+      '0': '0',
+      '1/5': '5%',
+      '1/4': '25%',
+      '1/2': '50%',
+      '3/4': '75%',
+      'full': '100%',
+    },
     extend: {
       colors: {
         current: "currentColor",
@@ -53,6 +61,10 @@ module.exports = {
         orderBg: "#E5F2FD",
         profileBg: "#E5C2AC",
         systemBg: "#EEEEEE",
+        customGray: "#EEEEEE",
+        customGray2: "D9D9D9",
+        customHex: "#e5f2fd",
+        customHex1: "#666666",
       },
       fontFamily: {
         sans: ["Helvetica Neue"],

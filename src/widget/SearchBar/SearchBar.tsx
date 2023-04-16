@@ -1,14 +1,14 @@
 import React from "react";
 import SearchLens from "../images/search_lens.svg";
-import CustomStyles from "../CustomStyles";
+import customStyle from "../customStyle";
 
 const SearchBar = (): JSX.Element => {
   return (
     <>
-      <div className={CustomStyles.searchBar.wrapper}>
-        <img className={CustomStyles.searchBar.image} src={SearchLens}></img>
+      <div className={customStyle.searchBar.wrapper}>
+        <img className={customStyle.searchBar.image} src={SearchLens}></img>
         <input
-          className={CustomStyles.searchBar.input}
+          className={customStyle.searchBar.input}
           placeholder="Search keyword"
         ></input>
       </div>

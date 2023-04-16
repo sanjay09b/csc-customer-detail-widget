@@ -1,26 +1,31 @@
 import React from "react";
+import { Routes, Route, NavLink } from "react-router-dom";
 import customStyle from "../customStyle";
 import EditIcon from "../ui/EditIcon";
-import Seperator from "../ui/Seperator";
+import ExpandedNotesExport from "../ExpandedTable/ExpandedNotesExport";
+import Seperator from "../SeperationLine/Seperator";
 
 const NotesHeader: React.FC<{ count: number }> = (props) => {
   return (
     <div className={customStyle.notesMainHeader}>
       <div className={customStyle.notesHeader}>
         <div className={customStyle.notes}>Notes</div>
-        <a href="#" className={customStyle.viewAll}>
+        <NavLink className={customStyle.viewAll} to="/expandedNotes">
           View all({props.count})
-        </a>
+        </NavLink>
         <div className={customStyle.composeNotes}>
-          <a href="#" className={customStyle.addNote}>
+          <NavLink to="#" className={customStyle.addNote}>
             Add Note
-          </a>
+          </NavLink>
           <button>
             <EditIcon />
           </button>
         </div>
       </div>
       <Seperator />
+      <Routes>
+        <Route path="/expandedNotes" element={<ExpandedNotesExport />} />
+      </Routes>
     </div>
   );
 };

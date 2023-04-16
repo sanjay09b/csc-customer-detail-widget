@@ -7,7 +7,7 @@ import info from "../images/Info.svg";
 import dropDown from "../images/dropdown.svg";
 import { NotesTable } from "../Interface";
 import NoteTypeButton from "../Buttons/NoteTypeButtons";
-import CustomStyles from "../CustomStyles";
+import customStyle from "../customStyle";
 
 const ExpandedNotes = (): JSX.Element => {
   const [notesData, setNotesData] = useState<NotesTable[]>([]);
@@ -33,25 +33,25 @@ const ExpandedNotes = (): JSX.Element => {
       {loading ? (
         <div>Loading...</div>
       ) : (
-        <div className={CustomStyles.notesTable.wrapper}>
+        <div className={customStyle.notesTable.wrapper}>
           <table>
             <thead>
-              <tr className={CustomStyles.notesTable.tableHeader.headerStyle}>
+              <tr className={customStyle.notesTable.tableHeader.headerStyle}>
                 <th
                   className={
-                    CustomStyles.notesTable.tableHeader.generalCellWrapper
+                    customStyle.notesTable.tableHeader.generalCellWrapper
                   }
                 >
                   <div
                     className={
-                      CustomStyles.notesTable.tableHeader.generalWrapper
+                      customStyle.notesTable.tableHeader.generalWrapper
                     }
                   >
                     Date
                     <button>
                       <img
                         className={
-                          CustomStyles.notesTable.tableHeader.imgDropdown
+                          customStyle.notesTable.tableHeader.imgDropdown
                         }
                         src={dropDown}
                       ></img>
@@ -60,34 +60,34 @@ const ExpandedNotes = (): JSX.Element => {
                 </th>
                 <th
                   className={
-                    CustomStyles.notesTable.tableHeader.csridCellWrapper
+                    customStyle.notesTable.tableHeader.csridCellWrapper
                   }
                 >
                   <div
                     className={
-                      CustomStyles.notesTable.tableHeader.generalWrapper
+                      customStyle.notesTable.tableHeader.generalWrapper
                     }
                   >
                     <img
                       className={
-                        CustomStyles.notesTable.tableHeader.imgSearchLens
+                        customStyle.notesTable.tableHeader.imgSearchLens
                       }
                       src={SearchLens}
                     ></img>
                     CSR ID
                   </div>
                 </th>
-                <th className={CustomStyles.notesTable.tableHeader.typeWrapper}>
+                <th className={customStyle.notesTable.tableHeader.typeWrapper}>
                   <div
                     className={
-                      CustomStyles.notesTable.tableHeader.generalWrapper
+                      customStyle.notesTable.tableHeader.generalWrapper
                     }
                   >
                     Type
                     <button>
                       <img
                         className={
-                          CustomStyles.notesTable.tableHeader.imgDropdown
+                          customStyle.notesTable.tableHeader.imgDropdown
                         }
                         src={dropDown}
                       ></img>
@@ -96,41 +96,41 @@ const ExpandedNotes = (): JSX.Element => {
                 </th>
                 <th
                   className={
-                    CustomStyles.notesTable.tableHeader.generalCellWrapper
+                    customStyle.notesTable.tableHeader.generalCellWrapper
                   }
                 >
                   Order ID
                 </th>
                 <th
                   className={
-                    CustomStyles.notesTable.tableHeader.contactCellWrapper
+                    customStyle.notesTable.tableHeader.contactCellWrapper
                   }
                 >
                   <div
                     className={
-                      CustomStyles.notesTable.tableHeader.generalWrapper
+                      customStyle.notesTable.tableHeader.generalWrapper
                     }
                   >
                     Contact
                     <img
-                      className={CustomStyles.notesTable.tableHeader.imgInfo}
+                      className={customStyle.notesTable.tableHeader.imgInfo}
                       src={info}
                     ></img>
                   </div>
                 </th>
                 <th
                   className={
-                    CustomStyles.notesTable.tableHeader.description.cellWrapper
+                    customStyle.notesTable.tableHeader.description.cellWrapper
                   }
                 >
                   <div
                     className={
-                      CustomStyles.notesTable.tableHeader.generalWrapper
+                      customStyle.notesTable.tableHeader.generalWrapper
                     }
                   >
                     <div
                       className={
-                        CustomStyles.notesTable.tableHeader.description
+                        customStyle.notesTable.tableHeader.description
                           .descriptionWrap
                       }
                     >
@@ -138,13 +138,13 @@ const ExpandedNotes = (): JSX.Element => {
                     </div>
                     <div
                       className={
-                        CustomStyles.notesTable.tableHeader.description
+                        customStyle.notesTable.tableHeader.description
                           .searchNoteWrap
                       }
                     >
                       <div
                         className={
-                          CustomStyles.notesTable.tableHeader.description
+                          customStyle.notesTable.tableHeader.description
                             .generalWrap
                         }
                       >
@@ -152,7 +152,7 @@ const ExpandedNotes = (): JSX.Element => {
                       </div>
                       <div
                         className={
-                          CustomStyles.notesTable.tableHeader.description
+                          customStyle.notesTable.tableHeader.description
                             .generalWrap
                         }
                       >
@@ -169,44 +169,40 @@ const ExpandedNotes = (): JSX.Element => {
                   <>
                     <tr
                       key={data.notesId}
-                      className={CustomStyles.notesTable.bodyStyle.rowStyle}
+                      className={customStyle.notesTable.bodyStyle.rowStyle}
                     >
-                      <td
-                        className={CustomStyles.notesTable.bodyStyle.rowStyle}
-                      >
+                      <td className={customStyle.notesTable.bodyStyle.rowStyle}>
                         {data.date}
                       </td>
                       <td
                         className={
-                          CustomStyles.notesTable.bodyStyle.generalCellWrap
+                          customStyle.notesTable.bodyStyle.generalCellWrap
                         }
                       >
                         {data.csrId}
                       </td>
                       <td
                         className={
-                          CustomStyles.notesTable.bodyStyle.generalCellWrap
+                          customStyle.notesTable.bodyStyle.generalCellWrap
                         }
                       >
                         <NoteTypeButton noteType={data.type} />
                       </td>
                       <td
-                        className={
-                          CustomStyles.notesTable.bodyStyle.orderidWrap
-                        }
+                        className={customStyle.notesTable.bodyStyle.orderidWrap}
                       >
                         {data.orderId}
                       </td>
                       <td
                         className={
-                          CustomStyles.notesTable.bodyStyle.generalCellWrap
+                          customStyle.notesTable.bodyStyle.generalCellWrap
                         }
                       >
                         {data.contact}
                       </td>
                       <td
                         className={
-                          CustomStyles.notesTable.bodyStyle.generalCellWrap
+                          customStyle.notesTable.bodyStyle.generalCellWrap
                         }
                       >
                         {data.description}

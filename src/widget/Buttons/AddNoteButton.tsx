@@ -1,9 +1,9 @@
-import CustomStyle from "../CustomStyles";
+import customStyle from "../customStyle";
 
 const AddNoteButton = (): JSX.Element => {
   return (
     <>
-      <button className={CustomStyle.addNoteButton}>Add Note</button>
+      <button className={customStyle.addNoteButton}>Add Note</button>
     </>
   );
 };

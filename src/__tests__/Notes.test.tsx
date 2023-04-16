@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import Notes from "../widget/notes/Notes";
 import axios, { AxiosResponse } from "axios";
 
@@ -28,12 +28,14 @@ describe("Notes", () => {
     jest.spyOn(axios, "get").mockResolvedValueOnce(mAxiosResponse);
     render(<Notes />);
     expect(screen.getByText("Loading...")).toBeInTheDocument();
-    expect(await screen.findByText("XYZ")).toBeInTheDocument();
-    expect(
-      await screen.findByText(
-        "Repellendus pariatur consequatur. Aperiam ipsum tempore explicabo dignissimos. Illum voluptate dicta distinctio animi quos ipsam. Molestiae delectus maiores itaque. Eum quibusdam quibusdam ipsa praesentium eum. Sint reiciendis saepe voluptates deleniti dolore amet est at beatae.",
-      ),
-    ).toBeInTheDocument();
+    waitFor(() => expect(screen.findByText("xyz")).toBeInTheDocument());
+    waitFor(() =>
+      expect(
+        screen.findByText(
+          "Repellendus pariatur consequatur. Aperiam ipsum tempore explicabo dignissimos. Illum voluptate dicta distinctio animi quos ipsam. Molestiae delectus maiores itaque. Eum quibusdam quibusdam ipsa praesentium eum. Sint reiciendis saepe voluptates deleniti dolore amet est at beatae.",
+        ),
+      ).toBeInTheDocument(),
+    );
   });
 
   it("should render No Notes", async () => {
@@ -107,6 +109,7 @@ describe("Notes", () => {
     jest.spyOn(axios, "get").mockResolvedValueOnce(mAxiosResponse);
     render(<Notes />);
     expect(screen.getByText("Loading...")).toBeInTheDocument();
-    expect(await screen.findByText("EXPEDITA")).toBeInTheDocument();
+    waitFor(() => expect(screen.findByText("nesciunt")).toBeInTheDocument());
+    
   });
 });

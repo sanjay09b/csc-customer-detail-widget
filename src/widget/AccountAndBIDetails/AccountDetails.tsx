@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { NavLink } from "react-router-dom";
 import { rouge, vib, beautyInsider } from "../images/image";
-import customeStyle from "../customStyle";
+import customStyle from "../customStyle";
 import { AccountDatas } from "../Interface";
+import SeperationLine from "../SeperationLine/SeperationLine";
 
 const BIStatusImage = (statusImage: string): string => {
   return (
@@ -38,27 +40,25 @@ const AccountDetails: React.FC = () => {
         <div>
           {accountData && (
             <div>
-              <div className={customeStyle.header.header}>
-                <div className={customeStyle.header.heading}>
+              <div className={customStyle.header.header}>
+                <div className={customStyle.header.heading}>
                   Account & BI Details
                 </div>
-                <span className={customeStyle.header.link}>
-                  <a href="#">View all</a>
+                <span className={customStyle.header.link}>
+                  <NavLink to="#">View all </NavLink>
                 </span>
               </div>
-              <div className={customeStyle.division.divisionDiv}>
-                <div className={customeStyle.division.division}></div>
-              </div>
-              <div className={customeStyle.customer.customerDetails}>
-                <div className={customeStyle.customer.customerMainDiv}>
-                  <div className={customeStyle.customer.customerDiv}>
+              <SeperationLine />
+              <div className={customStyle.customer.customerDetails}>
+                <div className={customStyle.customer.customerMainDiv}>
+                  <div className={customStyle.customer.customerDiv}>
                     <div
-                      className={`${customeStyle.mb_3} ${customeStyle.customer.customerDetail}`}
+                      className={`${customStyle.mb_3} ${customStyle.customer.customerDetail}`}
                     >
-                      <div className={customeStyle.customer.heading}>
+                      <div className={customStyle.customer.heading}>
                         BI Status
                       </div>
-                      <div className={customeStyle.customer.value}>
+                      <div className={customStyle.customer.value}>
                         <img
                           src={BIStatusImage(accountData.BIStatus)}
                           alt="BIStatus Logo"
@@ -66,112 +66,108 @@ const AccountDetails: React.FC = () => {
                       </div>
                     </div>
                     <div
-                      className={`${customeStyle.mb_2} ${customeStyle.customer.customerDetail}`}
+                      className={`${customStyle.mb_2} ${customStyle.customer.customerDetail}`}
                     >
-                      <div className={customeStyle.customer.heading}>
+                      <div className={customStyle.customer.heading}>
                         YTD Spend
                       </div>
-                      <div className={customeStyle.customer.value}>
+                      <div className={customStyle.customer.value}>
                         {`${accountData.YTDSpend}.00`}
                       </div>
                     </div>
                     <div
-                      className={`${customeStyle.mb_2} ${customeStyle.customer.customerDetail}`}
+                      className={`${customStyle.mb_2} ${customStyle.customer.customerDetail}`}
                     >
-                      <div className={customeStyle.customer.heading}>
+                      <div className={customStyle.customer.heading}>
                         BI Points
                       </div>
-                      <div className={customeStyle.customer.value}>
+                      <div className={customStyle.customer.value}>
                         {` ${accountData.BIPoints} pts`}
                       </div>
                     </div>
                     <div
-                      className={`${customeStyle.mb_2} ${customeStyle.customer.customerDetail}`}
+                      className={`${customStyle.mb_2} ${customStyle.customer.customerDetail}`}
                     >
-                      <div className={customeStyle.customer.heading}>
+                      <div className={customStyle.customer.heading}>
                         Birthday
                       </div>
-                      <div className={customeStyle.customer.value}>
+                      <div className={customStyle.customer.value}>
                         {`${accountData.birthMonth}/${accountData.birthDay}/${accountData.birthYear}`}
                       </div>
                     </div>
                     <div
-                      className={`${customeStyle.mb_2} ${customeStyle.customer.customerDetail}`}
+                      className={`${customStyle.mb_2} ${customStyle.customer.customerDetail}`}
                     >
-                      <div className={customeStyle.customer.heading}>
+                      <div className={customStyle.customer.heading}>
                         Birthday Gift
                       </div>
-                      <div className={customeStyle.customer.value}>
+                      <div className={customStyle.customer.value}>
                         {accountData.birthdayGift ? "Redeemed" : "Not Redeemed"}
                       </div>
                     </div>
                   </div>
-                  <div className={customeStyle.basis}>
+                  <div className={customStyle.basis}>
                     <div
-                      className={`${customeStyle.mb_2} ${customeStyle.customer.customerDetail}`}
+                      className={`${customStyle.mb_2} ${customStyle.customer.customerDetail}`}
                     >
-                      <div className={customeStyle.customer.heading}>
+                      <div className={customStyle.customer.heading}>
                         Profile Id
                       </div>
-                      <div className={customeStyle.customer.value}>
+                      <div className={customStyle.customer.value}>
                         <div>{accountData.profileId}</div>
                       </div>
                     </div>
                     <div
-                      className={`${customeStyle.mb_2} ${customeStyle.customer.customerDetail}`}
+                      className={`${customStyle.mb_2} ${customStyle.customer.customerDetail}`}
                     >
-                      <div className={customeStyle.customer.heading}>
-                        CRM ID
-                      </div>
-                      <div className={customeStyle.customer.value}>
+                      <div className={customStyle.customer.heading}>CRM ID</div>
+                      <div className={customStyle.customer.value}>
                         <div>{accountData.CRMId}</div>
                       </div>
                     </div>
-                    <div className={customeStyle.customer.customerDetail}>
-                      <div className={customeStyle.customer.heading}>
-                        USA ID
-                      </div>
-                      <div className={customeStyle.customer.value}>
+                    <div className={customStyle.customer.customerDetail}>
+                      <div className={customStyle.customer.heading}>USA ID</div>
+                      <div className={customStyle.customer.value}>
                         <div>{accountData.USAId}</div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className={customeStyle.addresses.address}>
-                  <div className={customeStyle.addresses.addressName}>
-                    <div className={customeStyle.addresses.addressDetail}>
+                <div className={customStyle.addresses.address}>
+                  <div className={customStyle.addresses.addressName}>
+                    <div className={customStyle.addresses.addressDetail}>
                       Shipping Address
                     </div>
-                    <div className={customeStyle.addresses.line1}>
+                    <div className={customStyle.addresses.line1}>
                       <div>
                         {`${accountData.shippingAddress.building} ${accountData.shippingAddress.state}`}
                       </div>
-                      <div className={customeStyle.addresses.line2}>
-                        <div className={customeStyle.addresses.innerLine}>
+                      <div className={customStyle.addresses.line2}>
+                        <div className={customStyle.addresses.innerLine}>
                           <div>{accountData.billingAddress.street}</div>
                           <div>{accountData.billingAddress.city}</div>
                         </div>
-                        <div className={customeStyle.addresses.innerLine}>
+                        <div className={customStyle.addresses.innerLine}>
                           <div>{accountData.billingAddress.pinCode}</div>
                           <div>{accountData.billingAddress.country}</div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div className={customeStyle.addresses.addressName}>
-                    <div className={customeStyle.addresses.addressDetail}>
+                  <div className={customStyle.addresses.addressName}>
+                    <div className={customStyle.addresses.addressDetail}>
                       Billing Address
                     </div>
-                    <div className={customeStyle.addresses.line1}>
+                    <div className={customStyle.addresses.line1}>
                       <div>
                         {`${accountData.billingAddress.building} ${accountData.billingAddress.state}`}
                       </div>
-                      <div className={customeStyle.addresses.line2}>
-                        <div className={customeStyle.addresses.innerLine}>
+                      <div className={customStyle.addresses.line2}>
+                        <div className={customStyle.addresses.innerLine}>
                           <div>{accountData.billingAddress.street}</div>
                           <div>{accountData.billingAddress.city}</div>
                         </div>
-                        <div className={customeStyle.addresses.innerLine}>
+                        <div className={customStyle.addresses.innerLine}>
                           <div>{accountData.billingAddress.pinCode}</div>
                           <div>{accountData.billingAddress.country}</div>
                         </div>

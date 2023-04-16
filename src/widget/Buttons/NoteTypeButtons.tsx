@@ -1,14 +1,14 @@
-import CustomStyles from "../CustomStyles";
+import customStyle from "../customStyle";
 
 const NoteTypeButton = (props: { noteType: string }): JSX.Element => {
   switch (props.noteType) {
     case "Order":
-      return <div className={CustomStyles.notesTypeButtons.order}>Order</div>;
+      return <div className={customStyle.notesTypeButtons.order}>Order</div>;
     case "System":
-      return <div className={CustomStyles.notesTypeButtons.system}>System</div>;
+      return <div className={customStyle.notesTypeButtons.system}>System</div>;
     case "Profile":
       return (
-        <div className={CustomStyles.notesTypeButtons.profile}>Profile</div>
+        <div className={customStyle.notesTypeButtons.profile}>Profile</div>
       );
     default:
       return <div>Unknown Error</div>;

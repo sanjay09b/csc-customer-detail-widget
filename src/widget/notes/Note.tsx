@@ -1,8 +1,8 @@
 import React from "react";
 import getDateBeginWithDay from "../utils/DateFormatter";
-import Seperator from "../ui/Seperator";
 import customStyle from "../customStyle";
 import { NoteDefinition } from "../Interface";
+import Seperator from "../SeperationLine/Seperator";
 
 const Note = ({
   createdAt = null,
@@ -24,7 +24,6 @@ const Note = ({
       </a>
     ) : null}
     <p className={customStyle.description}>{description}</p>
-
     <Seperator />
   </div>
 );

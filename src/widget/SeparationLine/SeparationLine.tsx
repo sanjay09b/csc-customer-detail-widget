@@ -1,10 +1,10 @@
 import React from "react";
-import CustomStyles from "../CustomStyles";
+import customStyle from "../customStyle";
 
 const SeparationLine = (): JSX.Element => {
   return (
     <>
-      <hr className={CustomStyles.separationLine.horizontalBold}></hr>
+      <hr className={customStyle.separationLine.horizontalBold}></hr>
     </>
   );
 };

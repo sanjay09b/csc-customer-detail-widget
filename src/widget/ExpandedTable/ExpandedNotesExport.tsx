@@ -1,9 +1,9 @@
 import ExpandedNotes from "./ExpandedNotes";
-import CustomStyle from "../CustomStyles";
+import customStyle from "../customStyle";
 
 const ExpandedNotesExport = (): JSX.Element => {
   return (
-    <div className={CustomStyle.exportWrapper}>
+    <div className={customStyle.exportWrapper}>
       <ExpandedNotes />
     </div>
   );

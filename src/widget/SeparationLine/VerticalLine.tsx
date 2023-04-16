@@ -1,10 +1,10 @@
 import React from "react";
-import CustomStyles from "../CustomStyles";
+import customStyle from "../customStyle";
 
 const VerticalLine = (): JSX.Element => {
   return (
     <>
-      <div className={CustomStyles.separationLine.vertical}></div>
+      <div className={customStyle.separationLine.vertical}></div>
     </>
   );
 };

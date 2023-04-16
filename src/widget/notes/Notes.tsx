@@ -37,11 +37,13 @@ const Notes: React.FC = () => {
 
   return (
     <div className={customStyle.notesSummary}>
-      <NotesHeader count={count} />
       {loading ? (
         <div className={customStyle.loading}>Loading...</div>
       ) : (
-        <NotesContainer notes={notes} />
+        <>
+          <NotesHeader count={count} />
+          <NotesContainer notes={notes} />
+        </>
       )}
     </div>
   );
