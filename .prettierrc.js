@@ -1,5 +1,5 @@
-const prettierConfig = require('csc-config-widget/prettierconfig.json')
+const prettierConfig = require("csc-config-widget/prettierconfig.json");
 
-module.exports={
-    ...prettierConfig
+module.exports = {
+  ...prettierConfig,
 };
