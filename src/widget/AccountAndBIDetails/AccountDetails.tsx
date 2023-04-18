@@ -3,6 +3,7 @@ import axios from "axios";
 import { rouge, vib, beautyInsider } from "../images/image";
 import customeStyle from "../customStyle";
 import { AccountDatas } from "../Interface";
+import SeparationLine from "../SeperationLine/SeperationLine";
 
 const BIStatusImage = (statusImage: string): string => {
   return (
@@ -46,9 +47,7 @@ const AccountDetails: React.FC = () => {
                   <a href="#">View all</a>
                 </span>
               </div>
-              <div className={customeStyle.division.divisionDiv}>
-                <div className={customeStyle.division.division}></div>
-              </div>
+              <SeparationLine />
               <div className={customeStyle.customer.customerDetails}>
                 <div className={customeStyle.customer.customerMainDiv}>
                   <div className={customeStyle.customer.customerDiv}>

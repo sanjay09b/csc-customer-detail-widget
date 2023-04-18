@@ -1,18 +1,14 @@
 import React from "react"; // we need this to make JSX compile
-import { AccountDetails } from "./AccountAndBIDetails/AccountDetails";
+import AccountDetailsExport from "./AccountAndBIDetails/AccountDetailsExport";
 import { WidgetProps } from "./Interface";
 import "./style.css";
 
-const Widget = ({
-  title = "",
-  paragraph = "",
-}: WidgetProps): JSX.Element | null => (
+const Widget = ({ title = "" }: WidgetProps): JSX.Element | null => (
   <div className="widget-name-wrapper tw-ml-6 tw-mr-6">
-    <div className="text-orange-600">
+    <div>
       <h2>{title}</h2>
     </div>
-    <p className="my-custom-style">{paragraph}</p>
-    <AccountDetails />
+    <AccountDetailsExport />
   </div>
 );
 
